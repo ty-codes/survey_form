@@ -5,7 +5,7 @@
 body {
  
   color: black;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-size: 20px;
   background-color: white;
   
@@ -92,7 +92,7 @@ label {
 .header {
   text-align: center;
   border-bottom: #287042 2px solid;
-  font-family: Updock;
+  font-family: 'Updock';
 }
 
 .form {
