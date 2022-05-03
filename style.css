@@ -80,11 +80,6 @@ label {
 		width:750px
 	}
 }
-@media (min-width:992px){
-	.container{width:970px}
-}@media (min-width:1200px){
-	.container{width:1170px}
-}
 
 .container:after,.container:before, .clearfix:after,.clearfix:before{
 	display:table;
@@ -187,4 +182,31 @@ fieldset label {
 }
 [dir="rtl"] .rating--nojs::-webkit-slider-thumb {
   box-shadow: var(--w) 0 0 var(--w) var(--fill);
+}
+@media (min-width:992px){
+	.container{width:970px}
+}@media (min-width:1200px){
+	.container{width:1170px}
+}
+@media screen and (min-width: 300px){
+
+  .container{max-height: 90%;}
+
+  body{font-size: 45px;}
+
+  .container label, textarea,input, input[type=submit]{
+    font-size: 35px;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .container{
+    max-height: 785px;
+  }
+    body {
+      font-size: 20px;
+    }
+    .container label, textarea,input, input[type=submit]{
+      font-size: 20px;
+    }
 }
