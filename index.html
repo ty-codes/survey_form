@@ -1,0 +1,326 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Updock|Montserrat">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Luxury Dining</title>
+    <link rel="icon" type="image/x-icon" href="./logo.svg">
+  </head>
+  
+  <body>
+    
+    <div class="container">
+      <!-- <div style="padding-bottom: 50px"></div> -->
+      <header class="header">
+        <div class="header-wrap">
+          <span class="big-logo"><span class="logo">LD</span></span>
+          <h1 class="title">Luxury Dining</h1>
+        </div>
+        
+
+      </header>
+      
+      <div class="form">
+        <form id="survey-form" action="#">
+          <!-- input boxes -->
+          <label class="bold" for="name" id="name-label">Name</label>
+          <input type="text" id="name" maxlength="40" placeholder="First name Last name" required>
+
+
+          <label class="bold" for="email" id="email-label">Email</label>
+          <input type="email" id="email" maxlength="40"placeholder="Email" required>
+
+
+          <label class="bold" for="number" id="number-label">Age</label><br>
+          <input type="number" id="number" min="12" max="140" placeholder="Age" required>
+          <br >
+
+          <fieldset >
+            <legend>Was this your first time at the restaurant?<br></legend> 
+            <input type="radio" name="first_time" value="first_time" id="first_time" checked>
+            <label for="first_time">Yes</label>
+            
+            <input type="radio" name="first_time" value="first_time" id="first_time">
+            <label for="first_time" >No</label><br>
+
+          </fieldset>
+          <!-- select box -->
+          <label class="bold" for="dropdown"> How did you discover our restaurant:</label>
+         <select id="dropdown" name="discover" required>
+            <option>A friend</option>
+            <option>Instagram</option>
+            <option>Facebook</option>
+            <option>Family</option>
+            <option>Other</option>
+          </select><br>
+
+          <label class="bold" for="best_part">What was the best part of your visit?<br></label>
+          <textarea id="best_part" name="best_part" placeholder="Share your thoughts.." rows="2" required ></textarea>
+
+          <label class="bold" for="worst_part">What was the worst part of your visit?</label>
+          <textarea id="worst_part" name="worst_part" placeholder="Share your thoughts.." rows="2" required></textarea>
+
+
+          <!-- radio box -->
+          <fieldset >
+            <legend>How often do you dine with us<br></legend> 
+            <input type="radio" name="frequency" value="once" id="once" checked>
+            <label for="once">Once a week</label>
+            
+            <input type="radio" name="frequency" value="2-3" id="2-3">
+            <label for="2-3" >2-3 times a week</label><br>
+
+            <input type="radio" name="frequency" value="4-5" id="4-5">
+            <label for="4-5" >4-5 times a week</label>
+
+            <input type="radio" name="frequency" value="daily" id="daily">
+            <label for="daily" >Daily</label><br>
+
+            <input type="radio" name="frequency" value="occasionally" id="occasionally">
+            <label for="occasionally" >Occasionally</label><br>
+
+          </fieldset>
+
+          <fieldset >
+            <legend>How likely is it that you will visit our restaurant again?<br></legend> 
+            <input type="radio" name="revisit" value="very likely" id="very_likely" checked>
+            <label for="very_likely">Very Likely</label>
+            
+            <input type="radio" name="revisit" value="likely" id="likely">
+            <label for="likely" >Likely</label><br>
+
+            <input type="radio" name="revisit" value="Unlikely" id="unlikely">
+            <label for="unlikely">Unlikely</label>
+            
+            <input type="radio" name="revisit" value="very unlikely" id="very_unlikely">
+            <label for="very_unlikely" >Very Unlikely</label><br>
+
+          </fieldset>
+
+          <fieldset >
+            <legend>Do you find that our restaurant family-friendly?<br></legend> 
+            <input type="radio" name="family-friendly" value="yes" id="yes" checked>
+            <label for="yes">Yes</label>
+            
+            <input type="radio" name="family-friendly" value="no" id="no">
+            <label for="no" >No</label><br>
+
+          </fieldset>
+
+          <fieldset  >
+            <legend>Are our hours convenient?<br></legend> 
+            <input type="radio" name="convenient_hours" value="yes" id="yes" checked>
+            <label for="yes">Yes</label>
+            
+            <input type="radio" name="convenient_hours" value="no" id="no">
+            <label for="no" >No</label><br>
+
+          </fieldset>
+
+ 
+          
+
+
+          <fieldset >
+            <legend>Were you satisfied with our drink menu?<br></legend> 
+            <input type="radio" name="drink_menu" value="yes" id="yes" checked>
+            <label for="yes">Yes</label>
+            
+            <input type="radio" name="drink_menu" value="no" id="no">
+            <label for="no" >No</label><br>
+
+          </fieldset>
+          
+          <div>
+            <label class="bold" for="ambiance" class="rating-label">How did you find the ambiance in our restaurant?</label>
+            <input
+              id="ambiance"
+              class="rating"
+              max="5"
+              oninput="this.style.setProperty('--value', `${this.valueAsNumber}`)"
+              step="0.5"
+              style="--value:2.5"
+              type="range"
+              value="2.5">
+          </label>
+        </div>
+          
+
+          <fieldset >
+            <legend>How likely is it that you will recommend our restaurant to a friend or family member?<br></legend> 
+            <input type="radio" name="recommend" value="likely" id="likely" checked>
+            <label for="likely">Likely</label>
+            
+            <input type="radio" name="recommend" value="not likely" id="not likely">
+            <label for="not likely" >Not likely</label><br>
+
+          </fieldset>
+
+          
+          
+
+          <!-- checkbox -->
+
+          <fieldset>
+            <legend>What is your favorite feature of <strong style="font-family: 'Updock'; font-size: 25px;">Luxury Dining</strong></legend>
+            <input type="checkbox" name="fav_feature" value="service" id="service" checked>
+          
+            <label for="service">Service</label>
+            
+            <input type="checkbox" name="fav_feature" value="facilities" id="facilities">
+            <label for="facilities" >Facilities</label><br>
+
+            <input type="checkbox" name="fav_feature" value="ambiance" id="ambiance">
+            <label for="ambiance">Ambiance</label> <br>
+
+            <input type="checkbox" name="fav_feature" value="menu" id="menu">
+            <label for="menu">Menu</label> <br>
+          </fieldset>
+          
+          
+          <label class="bold" for="improv" id="improv-label">What would you like to see improved? (max~500 characters)</label>
+          <textarea type id="improv" maxlength="500" rows="2" placeholder="Share your thoughts.." required></textarea>
+
+          <!-- facilities section -->
+          <fieldset >
+            <legend>Were the bathrooms and other failities, including the surroundings, clean?<br></legend> 
+            <input type="radio" name="clean" value="yes" id="yes" checked>
+            <label for="yes">Yes</label>
+            
+            <input type="radio" name="clean" value="no" id="no">
+            <label for="no" >No</label><br>
+
+          </fieldset>
+
+          <fieldset >
+            <legend>Was the music to your liking?<br></legend> 
+            <input type="radio" name="like_music" value="yes" id="yes" checked>
+            <label for="yes">Yes</label>
+            
+            <input type="radio" name="like_music" value="no" id="no">
+            <label for="no" >No</label><br>
+
+          </fieldset>
+
+          <!-- food & drink section -->
+          <div>
+            
+            <label class="bold" for="food_quality" class="rating-label">How would you rate the quality of our food?</label>
+              <input
+                id="food_quality"
+                class="rating"
+                max="5"
+                oninput="this.style.setProperty('--value', `${this.valueAsNumber}`)"
+                step="0.5"
+                style="--value:2.5"
+                type="range"
+                value="2.5">
+            </label>
+          </div>
+
+          <fieldset >
+            <legend>Were you pleased with our drink offerings?<br></legend> 
+            <input type="radio" name="like_drinks" value="yes" id="yes" checked>
+            <label for="yes">Yes</label>
+            
+            <input type="radio" name="like_drinks" value="no" id="no">
+            <label for="no" >No</label><br>
+
+          </fieldset>
+
+          <fieldset >
+            <legend>Do you find that our menu has something for everyone?<br></legend> 
+            <input type="radio" name="menu_for_everyone" value="yes" id="yes" checked>
+            <label for="yes">Yes</label>
+            
+            <input type="radio" name="menu_for_everyone" value="no" id="no">
+            <label for="no" >No</label><br>
+
+
+            <textarea id="explain_menu" maxlength="500" name="explain" placeholder="if no explain.." rows="2"></textarea>
+
+          </fieldset>
+
+          <!-- service section -->
+          <label class="bold" for="server">Who was your server today?</label>
+          <input type="text" id="server" maxlength="40" required>
+
+          <fieldset >
+            <legend>Was the service friendly/welcoming enough?<br></legend> 
+            <input type="radio" name="service" value="yes" id="yes" checked>
+            <label for="yes">Yes</label>
+            
+            <input type="radio" name="service" value="no" id="no">
+            <label for="no" >No</label><br>
+
+            <textarea id="explain_service" maxlength="500" name="explain" placeholder="if no explain.." rows="2"></textarea>
+
+
+          </fieldset>
+
+          <fieldset >
+            <legend>Did the food come out fast enough?<br></legend> 
+            <input type="radio" name="speed" value="yes" id="yes" checked>
+            <label for="yes">Yes</label>
+            
+            <input type="radio" name="speed" value="no" id="no">
+            <label for="no" >No</label><br>
+
+          </fieldset>
+
+          <div>
+            
+            <label class="bold" for="service_quality" class="rating-label">How would you rate our service today?</label>
+              <input
+                id="service_quality"
+                class="rating"
+                max="5"
+                oninput="this.style.setProperty('--value', `${this.valueAsNumber}`)"
+                step="0.5"
+                style="--value:2.5"
+                type="range"
+                value="2.5">
+            </label>
+          </div>
+
+          <!-- tech section -->
+          <fieldset >
+            <legend>Did our restaurant technology help make your checkout system efficient?<br></legend> 
+            <input type="radio" name="checkout_efficiency" value="yes" id="yes" checked>
+            <label for="yes">Yes</label>
+            
+            <input type="radio" name="checkout_efficiency" value="no" id="no">
+            <label for="no" >No</label><br>
+
+            <textarea id="checkout_efficiency" maxlength="500" name="explain" placeholder="if no explain.." rows="2"></textarea>
+
+
+          </fieldset>
+
+          <fieldset >
+            <legend>Did you use any of our discounts or special offers?<br></legend> 
+            <input type="radio" name="discount" value="yes" id="yes" checked>
+            <label for="yes">Yes</label>
+            
+            <input type="radio" name="discount" value="no" id="no">
+            <label for="no" >No</label><br>
+
+          </fieldset>
+
+          <!-- textarea -->
+          <label class="bold" for="comments">Any comments or suggestions?</label>
+          <textarea id="comments" name="comments" maxlength="500" placeholder="Share your thoughts.." style="height: 200px;"></textarea>
+
+          
+          
+
+          <input id="submit" type="submit" value="Submit" >
+        </form>
+      </div>
+      
+    </div>
+  </body>
+</html>

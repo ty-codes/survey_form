@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+
+}
+body {
+  color:black;
+  font-family: 'Montserrat';
+  font-size: 1em;
+  background-color: white;
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4em;
+  margin:0;
+}
+
+
+.big-logo {
+  position: relative;
+  height: 70px;
+  width: 100px;
+  border: 2px solid #fff3c1;
+  margin-top: 2.5em;
+  margin-left: 1.5em;
+}
+.logo {
+  position: absolute;
+  padding: 10px 25px;
+  border: 2px solid #ffa238;
+  /* right: 16%; */
+  /* bottom: 13%; */
+  color: white;
+  font-family: housttely signature;
+  font-weight: bolder;
+  
+  /* border-radius: 50%; */
+}
+.header-wrap {
+  display: inline-flex;
+}
+
+.title {
+  padding-left: 20px;
+  /* text-transform: lowercase; */
+  /* letter-spacing: 4px; */
+  font-family: housttely signature;
+  color: #ffa238;
+}
+header {
+  background-color:#03041a;
+
+}
+input {
+  font-family: "Montserrat";
+  font-size: 1em;
+}
+textarea:hover, select:hover {
+  background-color: #ddd;
+}
+#name:hover, #email:hover, #number:hover {
+  background-color: #ddd;
+}
+
+input[type=text], input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-family: "Montserrat";
+  font-size: 1em;
+}
+
+input[type=submit] {
+  background-color: #03041a;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin: 20px 0 20px 0;
+  width: 100%;
+}
+input[type=submit]:hover {
+  background-color: #ffa238;
+}
+input[type=submit]:focus {
+  color: #131313;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-size: 1em;
+  color: #03041a;
+  /* font-weight: 600; */
+}
+
+.bold {
+  font-weight: 600;
+}
+.header {
+  width: 100%;
+  text-align: left;
+  padding-bottom: 30px;
+  position: fixed;
+  z-index: 10;
+  background-color:#03041a;
+  /* border-bottom: #131313 2px solid; */
+}
+
+.form {
+ display: flex;
+ align-items: center;
+ justify-content: left;
+ padding: 0;
+ margin-top: 12em;
+ margin-left: 1.6%;
+
+}
+fieldset {
+  color: #03041a;
+}
+
+fieldset label {
+  font-size: 1em;
+}
+legend {
+  font-weight: 600;
+}
+/* rating stars */
+.rating {
+  --dir: right;
+  --fill: #ffa238;
+  --fillbg: rgba(100, 100, 100, 0.15);
+  --heart: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.328l-1.453-1.313q-2.484-2.25-3.609-3.328t-2.508-2.672-1.898-2.883-0.516-2.648q0-2.297 1.57-3.891t3.914-1.594q2.719 0 4.5 2.109 1.781-2.109 4.5-2.109 2.344 0 3.914 1.594t1.57 3.891q0 1.828-1.219 3.797t-2.648 3.422-4.664 4.359z"/></svg>');
+  --star: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.25l-6.188 3.75 1.641-7.031-5.438-4.734 7.172-0.609 2.813-6.609 2.813 6.609 7.172 0.609-5.438 4.734 1.641 7.031z"/></svg>');
+  --stars: 5;
+  --starsize: 2rem;
+  --symbol: var(--star);
+  --value: 1;
+  --w: calc(var(--stars) * var(--starsize));
+  --x: calc(100% * (var(--value) / var(--stars)));
+  block-size: var(--starsize);
+  inline-size: var(--w);
+  position: relative;
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  background-color: white ;
+  /* margin-left: 40%; */
+  margin-bottom: 1%;
+}
+[dir="rtl"] .rating {
+  --dir: left;
+}
+.rating::-moz-range-track {
+  background: linear-gradient(to var(--dir), var(--fill) 0 var(--x), var(--fillbg) 0 var(--x));
+  block-size: 100%;
+  mask: repeat left center/var(--starsize) var(--symbol);
+}
+.rating::-webkit-slider-runnable-track {
+  background: linear-gradient(to var(--dir), var(--fill) 0 var(--x), var(--fillbg) 0 var(--x));
+  block-size: 100%;
+  mask: repeat left center/var(--starsize) var(--symbol);
+  -webkit-mask: repeat left center/var(--starsize) var(--symbol);
+}
+.rating::-moz-range-thumb {
+  height: var(--starsize);
+  opacity: 0;
+  width: var(--starsize);
+}
+.rating::-webkit-slider-thumb {
+  height: var(--starsize);
+  opacity: 0;
+  width: var(--starsize);
+  -webkit-appearance: none;
+}
+.rating, .rating-label {
+  display: block;
+  font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
+.rating-label {
+  /* margin-block-end: 1rem; */
+  
+}
+
+/* NO JS */
+.rating--nojs::-moz-range-track {
+  background: var(--fillbg);
+}
+.rating--nojs::-moz-range-progress {
+  background: var(--fill);
+  block-size: 100%;
+  mask: repeat left center/var(--starsize) var(--star);
+}
+.rating--nojs::-webkit-slider-runnable-track {
+  background: var(--fillbg);
+}
+.rating--nojs::-webkit-slider-thumb {
+  background-color: var(--fill);
+  box-shadow: calc(0rem - var(--w)) 0 0 var(--w) var(--fill);
+  opacity: 1;
+  width: 1px;
+}
+[dir="rtl"] .rating--nojs::-webkit-slider-thumb {
+  box-shadow: var(--w) 0 0 var(--w) var(--fill);
+}
+
+/* @media (min-width:992px){
+	.container{width:970px}
+}@media (min-width:1200px){
+	.container{width:1170px}
+}
+@media screen and (min-width: 300px){
+
+  .container{max-height: 90%;}
+
+  body{font-size: 45px;}
+
+  .container label, textarea,input, input[type=submit]{
+    font-size: 35px;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .container{
+    max-height: 785px;
+  }
+    body {
+      font-size: 20px;
+    }
+    .container label, textarea,input, input[type=submit]{
+      font-size: 20px;
+    }
+}
+@media (min-width:768px){
+	.container{
+		width:750px
+	}
+} */
+
+.container{
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  text-align: left;
+  height: 100vh;
+  overflow-y: scroll;
+  color: #03041a;
+  background-color: white;
+
+}
+
+.container:after,.container:before, .clearfix:after,.clearfix:before{
+	display:table;
+	content:" ";
+}
+.container:after, .clearfix:after{
+	clear:both
+}
+
+@media only screen and (orientation: portrait) {
+  
+    body {
+      font-size: 1.8em;
+    }
+    input[type=text], input[type=email], select, textarea {
+      width: 98%;
+      /* padding: 12px; */
+      
+    }
+    fieldset {
+      width: 98%;
+    }
+    input[type=submit] {
+      margin: 20px 20px 20px 0;
+      width: 98%;
+    }
+}
