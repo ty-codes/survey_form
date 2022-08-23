@@ -1,3 +1,7 @@
+@font-face {
+  font-family: sega;
+  src: url(Housttely\ Signature.woff);
+}
 * {
   box-sizing: border-box;
 
@@ -31,10 +35,8 @@ h1 {
   position: absolute;
   padding: 10px 25px;
   border: 2px solid #ffa238;
-  /* right: 16%; */
-  /* bottom: 13%; */
   color: white;
-  font-family: 'housttely signature';
+  font-family: "housttely signature";
   font-weight: bolder;
   
   /* border-radius: 50%; */
@@ -45,9 +47,7 @@ h1 {
 
 .title {
   padding-left: 20px;
-  /* text-transform: lowercase; */
-  /* letter-spacing: 4px; */
-  font-family: 'housttely signature';
+  font-family: "housttely signature";
   color: #ffa238;
 }
 header {
@@ -57,6 +57,7 @@ header {
 input {
   font-family: "Montserrat";
   font-size: 1em;
+  margin-bottom: 2%;
 }
 textarea:hover, select:hover {
   background-color: #ddd;
@@ -73,6 +74,7 @@ input[type=text], input[type=email], select, textarea {
   resize: vertical;
   font-family: "Montserrat";
   font-size: 1em;
+  margin-bottom: 2%;
 }
 
 input[type=submit] {
@@ -110,7 +112,6 @@ label {
   position: fixed;
   z-index: 10;
   background-color:#03041a;
-  /* border-bottom: #131313 2px solid; */
 }
 
 .form {
@@ -124,6 +125,7 @@ label {
 }
 fieldset {
   color: #03041a;
+  margin-bottom: 2%;
 }
 
 fieldset label {
@@ -210,38 +212,6 @@ legend {
   box-shadow: var(--w) 0 0 var(--w) var(--fill);
 }
 
-/* @media (min-width:992px){
-	.container{width:970px}
-}@media (min-width:1200px){
-	.container{width:1170px}
-}
-@media screen and (min-width: 300px){
-
-  .container{max-height: 90%;}
-
-  body{font-size: 45px;}
-
-  .container label, textarea,input, input[type=submit]{
-    font-size: 35px;
-  }
-}
-
-@media only screen and (orientation: landscape) {
-  .container{
-    max-height: 785px;
-  }
-    body {
-      font-size: 20px;
-    }
-    .container label, textarea,input, input[type=submit]{
-      font-size: 20px;
-    }
-}
-@media (min-width:768px){
-	.container{
-		width:750px
-	}
-} */
 
 .container{
   margin: 0;
@@ -270,9 +240,7 @@ legend {
       font-size: 1.8em;
     }
     input[type=text], input[type=email], select, textarea {
-      width: 98%;
-      /* padding: 12px; */
-      
+      width: 98%;      
     }
     fieldset {
       width: 98%;
