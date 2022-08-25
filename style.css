@@ -1,5 +1,5 @@
 @font-face {
-  font-family: sega;
+  font-family: "housttely signature";
   src: url(Housttely\ Signature.woff);
 }
 * {
@@ -38,7 +38,7 @@ h1 {
   color: white;
   font-family: "housttely signature";
   font-weight: bolder;
-  
+  font-size: 0.5em;
   /* border-radius: 50%; */
 }
 .header-wrap {
@@ -47,11 +47,14 @@ h1 {
 
 .title {
   padding-left: 20px;
+  padding-top: 0.7em;
   font-family: "housttely signature";
   color: #ffa238;
+  font-size: 1.9em;
 }
 header {
   background-color:#03041a;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 
 }
 input {
